@@ -6,13 +6,16 @@ import TwilioLogo from './TwilioLogo';
 import { useAppState } from '../../state';
 import UserMenu from './UserMenu/UserMenu';
 import { useLocation } from 'react-router-dom';
+import { url } from 'inspector';
+import backgroundimage from '../../images/background_image.jpg'
 
 const useStyles = makeStyles((theme: Theme) => ({
   background: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    background: 'rgb(40, 42, 43)',
+    // background: 'azure',
+    // backgroundUrl:`url(${'https://imgix.bustle.com/uploads/shutterstock/2020/3/25/72415f8c-3e06-40fc-b5a6-32fd76c7b567-shutterstock-1270572721.jpg?w=374&h=249&fit=crop&crop=faces&auto=format%2Ccompress'})`,
     height: '100%',
   },
   container: {
@@ -21,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   innerContainer: {
     display: 'flex',
-    width: '888px',
+    width: '550px',
     height: '379px',
     borderRadius: '8px',
     boxShadow: '0px 2px 4px 0px rgba(40, 42, 43, 0.3)',
@@ -71,7 +74,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     margin: '20px',
   },
   content: {
-    background: 'white',
+    background: 'lavenderblush',
+    boxShadow: 'inset rgb(23 163 235) 1px 1px 20px 0px',
     width: '100%',
     padding: '3em 4em',
     flex: 1,
@@ -99,18 +103,11 @@ const IntroContainer = (props: IntroContainerProps) => {
   const location = useLocation();
 
   return (
-    <div className={classes.background}>
+    <div className={classes.background} style={{backgroundImage:`url(${backgroundimage})`,backgroundSize:'cover'}}>
       {user && location.pathname !== '/login' && <UserMenu />}
       <div className={classes.container}>
         <div className={classes.innerContainer}>
-          <div className={classes.swooshContainer}>
-            <div className={classes.logoContainer}>
-              {/* <VideoLogo /> */}
-              <Typography variant="h6" className={classes.title}>
-              MeetingHub
-              </Typography>
-            </div>
-          </div>
+       
           <div className={classes.content}>{props.children}</div>
         </div>
       </div>

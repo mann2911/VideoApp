@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: '100%',
     border: '2px solid #aaa',
     margin: '1em 0',
+    borderRadius: '10%'
   },
   localPreviewContainer: {
     paddingRight: '2em',

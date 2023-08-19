@@ -52,7 +52,7 @@ export default function RoomNameScreen({ name, roomName, setName, setRoomName, h
   return (
     <>
       <Typography variant="h5" className={classes.gutterBottom}>
-        Enter into Room
+        Welcome to <strong>MeetingHub!</strong>
       </Typography>
       <Typography variant="body1">
         {hasUsername
@@ -91,7 +91,7 @@ export default function RoomNameScreen({ name, roomName, setName, setRoomName, h
             />
           </div>
         </div>
-        <Grid container justifyContent="flex-end">
+        <Grid container justifyContent="center">
           <Button
             variant="contained"
             type="submit"
@@ -99,7 +99,7 @@ export default function RoomNameScreen({ name, roomName, setName, setRoomName, h
             disabled={!name || !roomName}
             className={classes.continueButton}
           >
-            Continue
+            Enter Into Room
           </Button>
         </Grid>
       </form>

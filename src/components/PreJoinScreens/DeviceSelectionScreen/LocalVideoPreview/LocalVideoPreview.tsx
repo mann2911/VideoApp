@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     overflow: 'hidden',
     paddingTop: `${(9 / 16) * 100}%`,
     background: 'black',
+    borderRadius:'6%'
   },
   innerContainer: {
     position: 'absolute',
