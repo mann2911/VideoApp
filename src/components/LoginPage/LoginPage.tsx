@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     textTransform: 'none',
     boxShadow: 'none',
     padding: '0.3em 1em',
+    textAlign:'center',
     [theme.breakpoints.down('sm')]: {
       width: '100%',
     },
@@ -101,11 +102,11 @@ export default function LoginPage() {
 
       {process.env.REACT_APP_SET_AUTH === 'passcode' && (
         <>
-          <Typography variant="h5" className={classes.gutterBottom}>
+          <Typography variant="h5" className={classes.gutterBottom} style={{textAlign:'center'}}>
             Enter passcode to join a room
           </Typography>
           <form onSubmit={handleSubmit}>
-            <Grid container justifyContent="space-between">
+            <Grid container justifyContent="center">
               <div className={classes.passcodeContainer}>
                 <InputLabel shrink htmlFor="input-passcode">
                   Passcode
@@ -127,7 +128,7 @@ export default function LoginPage() {
                 </div>
               </div>
             </Grid>
-            <Grid container justifyContent="flex-end">
+            <Grid container justifyContent="center">
               <Button
                 variant="contained"
                 color="primary"
